@@ -10,6 +10,7 @@ import android.widget.Button;
 public class Content_Activity extends AppCompatActivity {
       public  Button ThemeChanger;
       public  Button VibrationChange;
+      public  Button RandomAC;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +18,16 @@ public class Content_Activity extends AppCompatActivity {
 
         ThemeChanger=(Button) findViewById(R.id.button2);
         VibrationChange=(Button) findViewById(R.id.button3);
+        RandomAC=(Button)findViewById(R.id.button6);
+
+
+        RandomAC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(Content_Activity.this,RandomActivity.class);
+                startActivity(intent);
+            }
+        });
 
         ThemeChanger.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +44,8 @@ public class Content_Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
 
 
 
